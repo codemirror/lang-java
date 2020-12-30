@@ -20,18 +20,7 @@ conduct](http://contributor-covenant.org/version/1/1/0/) that applies
 to communication around the project.
 
 ## API Reference
-<dl>
-<dt id="user-content-java">
-  <code><strong><a href="#user-content-java">java</a></strong>() → <a href="https://codemirror.net/6/docs/ref#language.LanguageSupport">LanguageSupport</a></code></dt>
 
-<dd><p>Java language support.</p>
-</dd>
-<dt id="user-content-javalanguage">
-  <code><strong><a href="#user-content-javalanguage">javaLanguage</a></strong>: <a href="https://codemirror.net/6/docs/ref#language.LezerLanguage">LezerLanguage</a></code></dt>
+@java
 
-<dd><p>A language provider based on the <a href="https://github.com/lezer-parser/java">Lezer Java
-parser</a>, extended with
-highlighting and indentation information.</p>
-</dd>
-</dl>
-
+@javaLanguage
