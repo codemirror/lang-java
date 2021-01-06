@@ -1,6 +1,6 @@
 {
   "name": "@codemirror/lang-java",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "description": "Java language support for the CodeMirror code editor",
   "scripts": {
     "test": "echo 'No tests'",
