@@ -1,5 +1,6 @@
 import {parser} from "lezer-java"
-import {flatIndent, continuedIndent, indentNodeProp, foldNodeProp, LezerLanguage, LanguageSupport} from "@codemirror/language"
+import {flatIndent, continuedIndent, indentNodeProp, foldNodeProp, foldInside,
+        LezerLanguage, LanguageSupport} from "@codemirror/language"
 import {styleTags, tags as t} from "@codemirror/highlight"
 
 /// A language provider based on the [Lezer Java
@@ -20,8 +21,8 @@ export const javaLanguage = LezerLanguage.define({
         Statement: continuedIndent({except: /^{/})
       }),
       foldNodeProp.add({
-        "Block SwitchBlock ClassBody ElementValueArrayInitializer ModuleBody EnumBody ConstructorBody InterfaceBody ArrayInitializer"
-        (tree) { return {from: tree.from + 1, to: tree.to - 1} },
+        ["Block SwitchBlock ClassBody ElementValueArrayInitializer ModuleBody EnumBody " +
+         "ConstructorBody InterfaceBody ArrayInitializer"]: foldInside,
         BlockComment(tree) { return {from: tree.from + 2, to: tree.to - 2} }
       }),
       styleTags({
