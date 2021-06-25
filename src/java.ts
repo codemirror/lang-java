@@ -1,4 +1,4 @@
-import {parser} from "lezer-java"
+import {parser} from "@lezer/java"
 import {flatIndent, continuedIndent, indentNodeProp, foldNodeProp, foldInside,
         LezerLanguage, LanguageSupport} from "@codemirror/language"
 import {styleTags, tags as t} from "@codemirror/highlight"
