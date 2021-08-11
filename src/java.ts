@@ -1,12 +1,12 @@
 import {parser} from "@lezer/java"
 import {flatIndent, continuedIndent, indentNodeProp, foldNodeProp, foldInside,
-        LezerLanguage, LanguageSupport} from "@codemirror/language"
+        LRLanguage, LanguageSupport} from "@codemirror/language"
 import {styleTags, tags as t} from "@codemirror/highlight"
 
 /// A language provider based on the [Lezer Java
 /// parser](https://github.com/lezer-parser/java), extended with
 /// highlighting and indentation information.
-export const javaLanguage = LezerLanguage.define({
+export const javaLanguage = LRLanguage.define({
   parser: parser.configure({
     props: [
       indentNodeProp.add({
