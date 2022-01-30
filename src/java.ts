@@ -37,7 +37,7 @@ export const javaLanguage = LRLanguage.define({
           "strictfp synchronized native transient volatile throws"]: t.modifier,
         IntegerLiteral: t.integer,
         FloatLiteral: t.float,
-        StringLiteral: t.string,
+        "StringLiteral TextBlock": t.string,
         CharacterLiteral: t.character,
         LineComment: t.lineComment,
         BlockComment: t.blockComment,
