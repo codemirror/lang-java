@@ -1,5 +1,5 @@
 import {parser} from "@lezer/java"
-import {flatIndent, continuedIndent, indentNodeProp, foldNodeProp, foldInside,
+import {flatIndent, continuedIndent, indentNodeProp, delimitedIndent, foldNodeProp, foldInside,
         LRLanguage, LanguageSupport} from "@codemirror/language"
 
 /// A language provider based on the [Lezer Java
@@ -16,6 +16,7 @@ export const javaLanguage = LRLanguage.define({
           let after = context.textAfter, closed = /^\s*\}/.test(after), isCase = /^\s*(case|default)\b/.test(after)
           return context.baseIndent + (closed ? 0 : isCase ? 1 : 2) * context.unit
         },
+        Block: delimitedIndent({closing: "}"}),
         BlockComment: () => -1,
         Statement: continuedIndent({except: /^{/})
       }),
