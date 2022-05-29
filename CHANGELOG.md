@@ -1,3 +1,9 @@
+## 0.20.1 (2022-05-29)
+
+### Bug fixes
+
+Fix indentation of braced blocks.
+
 ## 0.20.0 (2022-04-20)
 
 ### Breaking changes
