@@ -1,6 +1,6 @@
 {
   "name": "@codemirror/lang-java",
-  "version": "0.20.1",
+  "version": "6.0.0",
   "description": "Java language support for the CodeMirror code editor",
   "scripts": {
     "test": "cm-runtests",
@@ -26,8 +26,8 @@
   "sideEffects": false,
   "license": "MIT",
   "dependencies": {
-    "@codemirror/language": "^0.20.0",
-    "@lezer/java": "^0.16.0"
+    "@codemirror/language": "^6.0.0",
+    "@lezer/java": "^1.0.0"
   },
   "devDependencies": {
     "@codemirror/buildhelper": "^0.1.0"
