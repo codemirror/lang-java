@@ -17,7 +17,7 @@ export const javaLanguage = LRLanguage.define({
           return context.baseIndent + (closed ? 0 : isCase ? 1 : 2) * context.unit
         },
         Block: delimitedIndent({closing: "}"}),
-        BlockComment: () => -1,
+        BlockComment: () => null,
         Statement: continuedIndent({except: /^{/})
       }),
       foldNodeProp.add({
