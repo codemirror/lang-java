@@ -6,6 +6,7 @@ import {flatIndent, continuedIndent, indentNodeProp, delimitedIndent, foldNodePr
 /// parser](https://github.com/lezer-parser/java), extended with
 /// highlighting and indentation information.
 export const javaLanguage = LRLanguage.define({
+  name: "java",
   parser: parser.configure({
     props: [
       indentNodeProp.add({
